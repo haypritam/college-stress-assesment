@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid related stress test for students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Stress.css">
+    <script type="text/javascript">
+        function preback(){window.history.forward();
+        }
+        setTimeout("preback()",0);
+        window.onunload=function(){null}
+    </script>
+</head>
+<body>
+    <div class="style">
+        <div class="question">
+            <div class="qus_body">
+                <h2>5. Are you deliberately avoiding conversations or discussions about COVID-19?</h2><br><br>
+                <div class="red">
+                    <input type="radio" name="qus5" id="q5_1">
+                    <label class="opt" for="q5_1">Not at all</label><br>
+                    <input type="radio" name="qus5" id="q5_2">
+                    <label class="opt" for="q5_2"> Somewhat</label><br>
+                    <input type="radio" name="qus5" id="q5_3">
+                    <label class="opt" for="q5_3">Moderately so</label><br>
+                    <input type="radio" name="qus5" id="q5_4">
+                    <label class="opt" for="q5_4">Always</label><br>
+                </div>
+                <div class="btn_nxt1">
+                    <br>
+                    <button onclick="click23()" class="btn_nxt">previous</button>
+                    <button onclick="click5()" class="btn_nxt">next</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Stress.js"></script>
+</body>
+</html>

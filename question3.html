@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid related stress test for students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Stress.css">
+    <script type="text/javascript">
+        function preback(){window.history.forward();
+        }
+        setTimeout("preback()",0);
+        window.onunload=function(){null}
+    </script>
+</head>
+<body>
+    <div class="style">
+        <div class="question">
+            <div class="qus_body">
+                <h2>3. Are you able to sleep 7-8 hours daily now?</h2><br><br>
+                <div class="red">
+                    <input type="radio" name="qus3" id="q3_1">
+                    <label class="opt" for="q3_1">Almost always </label><br>
+                    <input type="radio" name="qus3" id="q3_2">
+                    <label class="opt" for="q3_2"> Moderately so  </label><br>
+                    <input type="radio" name="qus3" id="q3_3">
+                    <label class="opt" for="q3_3"> Somewhat  </label><br>
+                    <input type="radio" name="qus3" id="q3_4">
+                    <label class="opt" for="q3_4"> Not at all </label><br>
+                </div>
+                <div class="btn_nxt1">
+                    <br>
+                    <button onclick="click21()" class="btn_nxt">previous</button>
+                    <button onclick="click3()" class="btn_nxt">next</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Stress.js"></script>
+</body>
+</html>

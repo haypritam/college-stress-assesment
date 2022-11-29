@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid related stress test for students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Stress.css">
+</head>
+<body>
+    <div class="style">
+        <div class="question">
+            <div class="res_body">
+                <h1 class="re" id="re"></h1>
+                <h2 class="re3" id="re3"></h2>
+                <h2 class="re1" id="re1"></h2>
+                <h3 class="re2" id="re2"></h3><br>
+                <h3 class="re2" id="re4"></h3><br>
+                <h3 class="re2" id="re5"></h3>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBA9fCmT83fsyrKA_ze2hsrBhHyx6VAF_k",
+        authDomain: "stressdata-ca5a4.firebaseapp.com",
+        databaseURL: "https://stressdata-ca5a4.firebaseio.com",
+        projectId: "stressdata-ca5a4",
+        storageBucket: "stressdata-ca5a4.appspot.com",
+        messagingSenderId: "1069675068774",
+        appId: "1:1069675068774:web:b9b988fe4be8a3d51d5ca7",
+        measurementId: "G-EKEYPQ8QFM"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    </script>
+    <script type="text/javascript">
+        var database = firebase.database();
+        var ref=database.ref('students');
+        var result=localStorage.getItem("result")
+        var age=localStorage.getItem("age")
+        var gender=localStorage.getItem("gender")
+        var area=localStorage.getItem("area")
+        var university=localStorage.getItem("uni")
+        var data = {
+            age: age,
+            area: gender,
+            gender: area,
+            university: university,
+            result: result
+        }
+        ref.push(data);
+        if(result>18){
+            document.getElementById("re").innerHTML="Your COVID-19 Stress is";
+            document.getElementById("re3").innerHTML="above average ";
+            document.getElementById("re2").innerHTML="*You have comparatively higher level of Covid related stress.Do not hesitate to reach out for psychological support if you feel the need for the same.";
+            document.getElementById("re4").innerHTML="Practising Yoga, meditation, exercising, sleeping adequately"
+            document.getElementById("re5").innerHTML="Maintaining social interactions will help you in lowering your stress level"
+        }
+        else{
+            document.getElementById("re").innerHTML="Your COVID-19 Stress is";
+            document.getElementById("re1").innerHTML="below average";
+            document.getElementById("re2").innerHTML="*You have a manageable amount of Covid related stress. You are coping well.";
+            document.getElementById("re4").innerHTML="Please continue your daily exercises."
+            document.getElementById("re5").innerHTML=" 7-8 hours of sleep,social interactions etc."
+        }
+        setTimeout(swal ( "hello" ,  "If you feel the need for psychological support, please get in touch with Psychological Counselling Cell, MDM, Birati, Contact no. 9831074360. Your identity will be kept anonymous"),10000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid related stress test for students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Stress.css">
+    <script type="text/javascript">
+        function preback(){window.history.forward();
+        }
+        setTimeout("preback()",0);
+        window.onunload=function(){null}
+    </script>
+</head>
+<body>
+    <div class="style">
+        <div class="question">
+            <div class="qus_body">
+                <h2>1.Are you aware of how COVID-19 spreads?</h2><br><br>
+                <div class="red">
+                    <input type="radio" name="qus1" id="q1_1">
+                    <label class="opt" for="q1_1"> No idea </label><br>
+                    <input type="radio" name="qus1" id="q1_2">
+                    <label class="opt" for="q1_2"> Somewhat aware  </label><br>
+                    <input type="radio" name="qus1" id="q1_3">
+                    <label class="opt" for="q1_3"> Moderately aware </label><br>
+                    <input type="radio" name="qus1" id="q1_4">
+                    <label class="opt" for="q1_4"> Definitely aware </label><br>
+                </div>
+                <div class="btn_nxt1">
+                    <br>
+                    <button onclick="click1()" class="btn_nxt">next</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="Stress.js"></script>
+</body>
+</html>

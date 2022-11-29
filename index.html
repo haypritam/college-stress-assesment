@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid related stress test for students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Stress.css">
+    <script type="text/javascript">
+        function preback(){window.history.forward();
+        }
+        setTimeout("preback()",0);
+        window.onunload=function(){null}
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <br><br><br>
+            <div class="title">
+                <h1>Covid related stress test for students</h1>
+            </div>
+            <div class="sub">
+                <h3>Developed by Mrinalini Datta Mahavidyapith, Birati.</h3>
+            </div>
+        </header>
+        <form >
+            <div class="inf">
+                <div class="dummy">
+
+                </div>
+                <div class="inf1">
+                    <div class="age">
+                        <h5><input id="age" type="number",name="AGE" placeholder="E.g:19"> Age</h5>
+                    </div>
+                    <div class="area">
+                        <h5>
+                            <select id="area" name="area" >
+                            <option value="default" selected hidden >domicile status</option>
+                            <option value="Rural"> Rural</option>
+                            <option value="Urban"> Urban</option>
+                            <option value="Semi Urban"> Semi Urban</option>
+                            </select> Area
+                            </h5>
+                    </div>
+                </div>
+                <div class="inf2">
+                    <div class="gen">
+                        <h5>
+                            <select id="gender" name="GENDER" >
+                            <option value="default" selected hidden>Your gender</option>
+                            <option value="Male"> Male</option>
+                            <option value="Female"> Female</option>
+                            <option value="not">prefer not to say</option>
+                            </select> Gender</h5>
+                    </div>
+                    <div class="uni">
+                        <h5 class="h51"><input id="University" type="Text" name="collage or university" placeholder="Name of University">
+                            University/College</h5>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <footer>
+            <h6 >*Your identity will remain confidential. Information collected is for helping students in general and not for commercial use.</h6>
+
+        </footer>
+        <div class="btn_nxt">
+            <button onclick="clicka()" style="vertical-align:middle"><span>start self assessment test</span></button>
+        </div>
+        <div class="tes">
+            <br><br>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBA9fCmT83fsyrKA_ze2hsrBhHyx6VAF_k",
+        authDomain: "stressdata-ca5a4.firebaseapp.com",
+        databaseURL: "https://stressdata-ca5a4.firebaseio.com",
+        projectId: "stressdata-ca5a4",
+        storageBucket: "stressdata-ca5a4.appspot.com",
+        messagingSenderId: "1069675068774",
+        appId: "1:1069675068774:web:b9b988fe4be8a3d51d5ca7",
+        measurementId: "G-EKEYPQ8QFM"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    </script>
+
+    <script src="Stress.js"></script>
+</body>
+</html>
